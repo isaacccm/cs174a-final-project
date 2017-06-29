@@ -1,0 +1,23 @@
+Isaac Choi
+
+CS 174A Final Project README
+
+Our final project is a game where the player must shoot all the bubbles on the screen to advance to the next level. There are 9 bubbles in each level with random offsets.
+The speed of the game increases with each level, until the user gives up. The score for hitting a bubble increases with each level, and the background changes for each level as well. 
+We have implemented sound such that a gun shot will be heard when firing (left click mouse) and a bubble popping sound will be heard when the bullet fired pops the bubble. 
+There can only be one bullet at a time on the screen so that the player cannot rapid-fire his way to victory. 
+
+To get OpenAL working on my system (64-bit windows 8) I did the following steps:
+1. Open and Run oalinst.exe
+2. Open and Run OpenAL11CoreSDK.exe, install to C://Program Files(x86) (if you install in Program Files, you will have to find your includes/libs there)
+3. Copy alut.h to the C:\Program Files(x86)\OpenAL 1.1 SDK\include directory
+4. Copy alut.lib to the C:\Program Files(x86)\OpenAL 1.1 SDK\libs\Win32 directory in your 
+4. To use with Visual Studio, in project properties:
+	- Add C:\Program Files(x86)\OpenAL 1.1 SDK\include to
+	C++ -> General -> Additional Include Directories
+	- Add  C:\Program Files(x86)\OpenAL 1.1 SDK\libs\Win32 to
+   	Linker -> General -> Additional Library Directories
+	- Add OpenAL32.lib and ALut.lib at the end in 
+   	Linker -> Input -> Additional Dependencies
+
+Everything should work at this point. 
